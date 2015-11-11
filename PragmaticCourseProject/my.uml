@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_r6cHwBWjEeWgktNm2bukEA" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="__68BoBWjEeWgktNm2bukEA" name="Product" isAbstract="true">
+    <ownedAttribute xmi:id="_Co4OkBWkEeWgktNm2bukEA" name="productID"/>
+    <ownedAttribute xmi:id="_ShIgsBWkEeWgktNm2bukEA" name="price"/>
+    <ownedAttribute xmi:id="_V9MX4BWkEeWgktNm2bukEA" name="count"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aMJEkBWkEeWgktNm2bukEA" name="Book">
+    <generalization xmi:id="_JpITUBWmEeWgktNm2bukEA" general="__68BoBWjEeWgktNm2bukEA"/>
+    <ownedAttribute xmi:id="_cgGrQBWkEeWgktNm2bukEA" name="name"/>
+    <ownedAttribute xmi:id="_dUGUABWkEeWgktNm2bukEA" name="author"/>
+    <ownedAttribute xmi:id="_gvIQcBWkEeWgktNm2bukEA" name="genre"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zbQYYBWkEeWgktNm2bukEA" name="Magazine ">
+    <generalization xmi:id="_JJP5YBWmEeWgktNm2bukEA" general="_aMJEkBWkEeWgktNm2bukEA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_MkROwBWmEeWgktNm2bukEA" name="BookStore">
+    <ownedAttribute xmi:id="_OvTi8BWmEeWgktNm2bukEA" name="storeID"/>
+    <ownedAttribute xmi:id="_YmTdQBWmEeWgktNm2bukEA" name="ListOfProducts"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mTAd0BWmEeWgktNm2bukEA" memberEnd="_mTAd0RWmEeWgktNm2bukEA _mTBE4hWmEeWgktNm2bukEA" navigableOwnedEnd="_mTAd0RWmEeWgktNm2bukEA _mTBE4hWmEeWgktNm2bukEA">
+    <ownedEnd xmi:id="_mTAd0RWmEeWgktNm2bukEA" name="products" type="__68BoBWjEeWgktNm2bukEA" association="_mTAd0BWmEeWgktNm2bukEA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mTBE4BWmEeWgktNm2bukEA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mTBE4RWmEeWgktNm2bukEA" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_mTBE4hWmEeWgktNm2bukEA" name="bookStores" type="_MkROwBWmEeWgktNm2bukEA" association="_mTAd0BWmEeWgktNm2bukEA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mTBE4xWmEeWgktNm2bukEA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mTBE5BWmEeWgktNm2bukEA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_LmsWwBWnEeWgktNm2bukEA" name="Scenario_0"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Ws4BABWnEeWgktNm2bukEA" name="OperationInBookStore">
+    <ownedOperation xmi:id="_ZwPrYBWnEeWgktNm2bukEA" name="addNewBook"/>
+  </packagedElement>
+</uml:Model>
