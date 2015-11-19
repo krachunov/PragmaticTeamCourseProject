@@ -7,8 +7,6 @@ package BookStore;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Scanner;
-import java.util.UUID;
 
 public class BookStore implements IBookStore {
 	private String nameStore;
@@ -62,7 +60,7 @@ public class BookStore implements IBookStore {
 		return null;
 	}
 
-	@SuppressWarnings("null")
+
 	@Override
 	public int createNewProduct(String title, String author, double price,
 			int count, String typeOfProduct) {
@@ -85,7 +83,6 @@ public class BookStore implements IBookStore {
 	/**
 	 * return List of Product or null
 	 */
-	@SuppressWarnings("null")
 	@Override
 	public List<Product> searchByTitle(String title) {
 		List<Product> resultsFound = new ArrayList<Product>();
@@ -137,8 +134,7 @@ public class BookStore implements IBookStore {
 	 */
 	@Override
 	public boolean removeProduct(Product product) throws NoSuchElementException {
-		Product productForRemove = product;
-		if (listOfProducts.contains(product)) {
+			if (listOfProducts.contains(product)) {
 			listOfProducts.remove(product);
 			return true;
 		} else {

@@ -14,7 +14,6 @@ public class Magazine extends Book {
 	public Magazine(String name, String author, String genere,
 			boolean isBestSaller, double price, int count, String type) {
 		super(name, author, price, count);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**

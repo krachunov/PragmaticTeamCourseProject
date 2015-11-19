@@ -2,7 +2,8 @@ package BookStore;
 
 public class UserManagement implements IUserManagement {
 	private int currentNumOfUsers = 0;
-	private User[] users = new User[10];
+	private int numberOfPosibleUsers = 10;
+	private User[] users = new User[numberOfPosibleUsers];
 
 	public User selectUserById(int userId) {
 		return users[userId];
