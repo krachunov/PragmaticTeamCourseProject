@@ -1,3 +1,6 @@
+/**
+ * @author Krachunov
+ */
 package BookStore;
 
 public abstract class Product implements Comparable<Product> {

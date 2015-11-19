@@ -1,3 +1,6 @@
+/**
+ * @author Krachunov
+ */
 package BookStore;
 public class NoSuchElementException extends Exception {
 
