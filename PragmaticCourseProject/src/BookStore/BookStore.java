@@ -84,10 +84,12 @@ public class BookStore implements IBookStore {
 	@SuppressWarnings("null")
 	@Override
 	public List<Product> searchByTitle(String title) {
-		List<Product> resultsFound = null;
+		List<Product> resultsFound = new ArrayList<Product>();
 		for (Product product : listOfProducts) {
-			if (product.getTitle().matches(
-					"(.*)" + title.toLowerCase() + "(.*)")) {
+			String currentTitle = title.toLowerCase();
+			if (product.getTitle().toLowerCase().matches(
+//					"(.*)" + currentTitle + "(.*)")) {
+					".*" + currentTitle + ".*")) {
 				resultsFound.add(product);
 			}
 		}
