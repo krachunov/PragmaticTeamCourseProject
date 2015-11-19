@@ -1,3 +1,6 @@
+/**
+ * @author Krachunov
+ */
 package BookStore;
 
 import java.util.*;
